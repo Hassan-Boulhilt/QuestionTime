@@ -63,7 +63,7 @@ ROOT_URLCONF = 'QuestionTime.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,3 +130,10 @@ STATIC_URL = '/static/'
 
 # User model
 AUTH_USER_MODEL = 'users.CustomUser'
+
+
+# Account urls redirect
+
+LOGIN_URL = 'accounts/login'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
